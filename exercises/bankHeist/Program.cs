@@ -36,8 +36,6 @@ namespace bankHeist
 
             Console.WriteLine($"Your heist team has {teamMembers.Count} members");
 
-            int bankDifficulty = 100;
-
             // Display each member's info
             // foreach (Dictionary<string, string> member in teamMembers)
             // {
@@ -47,6 +45,24 @@ namespace bankHeist
             //     }
             // };
 
+            int bankDifficulty = 100;
+            int sumOfMemberSkills = 0;
+
+            foreach (Dictionary<string, string> teamMember in teamMembers)
+            {
+                int memberSkill = int.Parse(teamMember["skill level"]);
+                sumOfMemberSkills += memberSkill;
+            }
+
+            Console.WriteLine($"Team Skill Level: {sumOfMemberSkills}");
+            if (sumOfMemberSkills >= bankDifficulty)
+            {
+                Console.WriteLine("Rob those suckers!");
+            }
+            else
+            {
+                Console.WriteLine("Try a different establishment.");
+            }
         }
     }
 }
