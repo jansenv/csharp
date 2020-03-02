@@ -45,27 +45,35 @@ namespace bankHeist
             //     }
             // };
 
-            int sumOfMemberSkills = 0;
             Random random = new Random();
-            int luckValue = random.Next(-10, 11);
-            int bankDifficulty = luckValue + 100;
 
-            foreach (Dictionary<string, string> teamMember in teamMembers)
-            {
-                int memberSkill = int.Parse(teamMember["skill level"]);
-                sumOfMemberSkills += memberSkill;
-            }
+            Console.WriteLine("How many trials you wanna do");
+            string trialRuns = Console.ReadLine();
+            int trialRunsNum = int.Parse(trialRuns);
 
-            Console.WriteLine($"Team Skill Level: {sumOfMemberSkills}");
-            Console.WriteLine($"Bank Difficulty Level: {bankDifficulty}");
+            for (int i = 0; i < trialRunsNum; i++)
+            {
+                int sumOfMemberSkills = 0;
+                int luckValue = random.Next(-10, 11);
+                int bankDifficulty = luckValue + 100;
 
-            if (sumOfMemberSkills >= bankDifficulty)
-            {
-                Console.WriteLine("Rob those suckers!");
-            }
-            else
-            {
-                Console.WriteLine("Try a different establishment.");
+                foreach (Dictionary<string, string> teamMember in teamMembers)
+                {
+                    int memberSkill = int.Parse(teamMember["skill level"]);
+                    sumOfMemberSkills += memberSkill;
+                }
+
+                Console.WriteLine($"Team Skill Level: {sumOfMemberSkills}");
+                Console.WriteLine($"Bank Difficulty Level: {bankDifficulty}");
+
+                if (sumOfMemberSkills >= bankDifficulty)
+                {
+                    Console.WriteLine("Rob those suckers!");
+                }
+                else
+                {
+                    Console.WriteLine("Try a different establishment.");
+                }
             }
         }
     }
