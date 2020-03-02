@@ -31,7 +31,18 @@ namespace bankHeist
                 teamMember.Add("courage factor", memberCourage);
 
                 Console.WriteLine($"Member: {memberName}; Member Skill: {memberSkill}; Member Courage: {memberCourage}");
+                teamMembers.Add(teamMember);
             }
+
+            Console.WriteLine($"Your heist team has {teamMembers.Count} members");
+            foreach (Dictionary<string, string> member in teamMembers)
+            {
+                foreach (KeyValuePair<string, string> i in member)
+                {
+                    Console.WriteLine($"{i.Key}: {i.Value}");
+                }
+            };
+
         }
     }
 }
