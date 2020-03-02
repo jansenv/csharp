@@ -45,8 +45,10 @@ namespace bankHeist
             //     }
             // };
 
-            int bankDifficulty = 100;
             int sumOfMemberSkills = 0;
+            Random random = new Random();
+            int luckValue = random.Next(-10, 11);
+            int bankDifficulty = luckValue + 100;
 
             foreach (Dictionary<string, string> teamMember in teamMembers)
             {
@@ -55,6 +57,8 @@ namespace bankHeist
             }
 
             Console.WriteLine($"Team Skill Level: {sumOfMemberSkills}");
+            Console.WriteLine($"Bank Difficulty Level: {bankDifficulty}");
+
             if (sumOfMemberSkills >= bankDifficulty)
             {
                 Console.WriteLine("Rob those suckers!");
