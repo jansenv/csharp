@@ -8,16 +8,21 @@ namespace bankHeist
         static void Main(string[] args)
         {
             Console.WriteLine("Plan Your Heist!");
-            Dictionary<int, string> memberName = new Dictionary<int, string>();
-            Dictionary<int, int> memberSkillLevel = new Dictionary<int, int>();
-            Dictionary<int, decimal> memberCourage = new Dictionary<int, decimal>();
+            Dictionary<string, string> teamMember = new Dictionary<string, string>();
+
             Console.WriteLine("Add your heist member: ");
             string singleMemberName = Console.ReadLine();
-            Console.WriteLine("Enter the member's skill level: ");
-            string singleMemberSkillLevel = Console.ReadLine();
-            Console.WriteLine("Enter the member's courage factor: ");
+            teamMember.Add("name", singleMemberName);
+
+            Console.WriteLine("Enter the member's skill level (0-100): ");
+            string singleMemberSkill = Console.ReadLine();
+            teamMember.Add("skill level", singleMemberSkill);
+
+            Console.WriteLine("Enter the member's courage factor (0.0-2.0): ");
             string singleMemberCourage = Console.ReadLine();
-            Console.WriteLine($"Member: {singleMemberName}; Member Skill: {singleMemberSkillLevel}; Member Courage: {singleMemberCourage}");
+            teamMember.Add("courage factor", singleMemberCourage);
+
+            Console.WriteLine($"Member: {singleMemberName}; Member Skill: {singleMemberSkill}; Member Courage: {singleMemberCourage}");
         }
     }
 }
