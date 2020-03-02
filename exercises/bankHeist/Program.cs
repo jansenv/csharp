@@ -13,6 +13,8 @@ namespace bankHeist
             Dictionary<int, decimal> memberCourage = new Dictionary<int, decimal>();
             Console.WriteLine("Add your heist member: ");
             string singleMemberName = Console.ReadLine();
+            Console.WriteLine("Enter the skill level of that member: ");
+            string singleMemberSkillLevel = Console.ReadLine();
         }
     }
 }
