@@ -35,13 +35,17 @@ namespace bankHeist
             }
 
             Console.WriteLine($"Your heist team has {teamMembers.Count} members");
-            foreach (Dictionary<string, string> member in teamMembers)
-            {
-                foreach (KeyValuePair<string, string> i in member)
-                {
-                    Console.WriteLine($"{i.Key}: {i.Value}");
-                }
-            };
+
+            int bankDifficulty = 100;
+
+            // Display each member's info
+            // foreach (Dictionary<string, string> member in teamMembers)
+            // {
+            //     foreach (KeyValuePair<string, string> i in member)
+            //     {
+            //         Console.WriteLine($"{i.Key}: {i.Value}");
+            //     }
+            // };
 
         }
     }
