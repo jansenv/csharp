@@ -40,7 +40,23 @@ namespace Planner
             NSS.Construct();
             NSS.Purchase("Steve B");
 
-            Console.WriteLine("NSS");
+            // Console.WriteLine("NSS");
+
+            City megalopolis = new City()
+            {
+                name = "Megalopolis",
+                mayor = "Superman",
+                year = 1933
+            };
+
+            megalopolis.AddBuilding(FiveOneTwoEighth);
+            megalopolis.AddBuilding(OldNSS);
+            megalopolis.AddBuilding(NSS);
+
+            foreach (Building building in megalopolis.Buildings)
+            {
+                Console.WriteLine(building);
+            }
         }
     }
 }
