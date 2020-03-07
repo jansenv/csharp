@@ -72,6 +72,11 @@ namespace StudentExercises
                 LastName = "Truett",
                 SlackHandle = "ST"
             };
+
+            C35.AddStudent(Sage);
+            C36.AddStudent(RyanB);
+            C37.AddStudent(JohnG);
+            C37.AddStudent(SpencerT);
         }
     }
 }
