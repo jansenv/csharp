@@ -44,6 +44,34 @@ namespace StudentExercises
             {
                 name = "Cohort 37"
             };
+
+            Student Sage = new Student()
+            {
+                FirstName = "Sage",
+                LastName = "Foo",
+                SlackHandle = "SageFoo"
+            };
+
+            Student RyanB = new Student()
+            {
+                FirstName = "Ryan",
+                LastName = "Bishop",
+                SlackHandle = "RyanB"
+            };
+
+            Student JohnG = new Student()
+            {
+                FirstName = "John",
+                LastName = "Gilliam",
+                SlackHandle = "JG"
+            };
+
+            Student SpencerT = new Student()
+            {
+                FirstName = "Spencer",
+                LastName = "Truett",
+                SlackHandle = "ST"
+            };
         }
     }
 }
