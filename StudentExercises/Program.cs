@@ -105,6 +105,33 @@ namespace StudentExercises
             C35.AddInstructor(SteveB);
             C36.AddInstructor(AdamS);
             C37.AddInstructor(Leah);
+
+            SteveB.assignExercise(Sage, MartinsAquarium);
+            SteveB.assignExercise(Sage, CongressionalRep);
+            SteveB.assignExercise(RyanB, Nutshell);
+            SteveB.assignExercise(RyanB, Buildings);
+            SteveB.assignExercise(JohnG, MartinsAquarium);
+            SteveB.assignExercise(JohnG, Nutshell);
+            SteveB.assignExercise(SpencerT, CongressionalRep);
+            SteveB.assignExercise(SpencerT, Nutshell);
+
+            AdamS.assignExercise(Sage, Nutshell);
+            AdamS.assignExercise(Sage, Buildings);
+            AdamS.assignExercise(RyanB, MartinsAquarium);
+            AdamS.assignExercise(RyanB, CongressionalRep);
+            AdamS.assignExercise(JohnG, Buildings);
+            AdamS.assignExercise(JohnG, CongressionalRep);
+            AdamS.assignExercise(SpencerT, Buildings);
+            AdamS.assignExercise(SpencerT, MartinsAquarium);
+
+            Leah.assignExercise(Sage, Nutshell);
+            Leah.assignExercise(Sage, MartinsAquarium);
+            Leah.assignExercise(RyanB, MartinsAquarium);
+            Leah.assignExercise(RyanB, Buildings);
+            Leah.assignExercise(JohnG, Nutshell);
+            Leah.assignExercise(JohnG, Buildings);
+            Leah.assignExercise(SpencerT, CongressionalRep);
+            Leah.assignExercise(SpencerT, MartinsAquarium);
         }
     }
 }
