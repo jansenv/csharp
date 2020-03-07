@@ -29,6 +29,21 @@ namespace StudentExercises
                 name = "Buildings",
                 language = "C#"
             };
+
+            Cohort C35 = new Cohort()
+            {
+                name = "Cohort 35"
+            };
+
+            Cohort C36 = new Cohort()
+            {
+                name = "Cohort 36"
+            };
+
+            Cohort C37 = new Cohort()
+            {
+                name = "Cohort 37"
+            };
         }
     }
 }
