@@ -14,7 +14,5 @@ namespace StudentExercises
         {
             student.Exercises.Add(singleExercise);
         }
-
-        public List<Exercise> Exercises = new List<Exercise>();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace StudentExercises
 {
@@ -132,6 +133,18 @@ namespace StudentExercises
             Leah.assignExercise(JohnG, Buildings);
             Leah.assignExercise(SpencerT, CongressionalRep);
             Leah.assignExercise(SpencerT, MartinsAquarium);
+
+            List<Student> students = new List<Student>();
+            students.Add(Sage);
+            students.Add(RyanB);
+            students.Add(JohnG);
+            students.Add(SpencerT);
+
+            List<Exercise> exercises = new List<Exercise>();
+            exercises.Add(MartinsAquarium);
+            exercises.Add(CongressionalRep);
+            exercises.Add(Buildings);
+            exercises.Add(Nutshell);
         }
     }
 }
