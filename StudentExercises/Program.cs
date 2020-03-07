@@ -77,6 +77,34 @@ namespace StudentExercises
             C36.AddStudent(RyanB);
             C37.AddStudent(JohnG);
             C37.AddStudent(SpencerT);
+
+            Instructor SteveB = new Instructor()
+            {
+                FirstName = "Steve",
+                LastName = "Brownlee",
+                SlackHandle = "choortlehort",
+                Specialty = "Dad Jokes"
+            };
+
+            Instructor AdamS = new Instructor()
+            {
+                FirstName = "Adam",
+                LastName = "Sheaffer",
+                SlackHandle = "AdamS",
+                Specialty = "var"
+            };
+
+            Instructor Leah = new Instructor()
+            {
+                FirstName = "Leah",
+                LastName = "Hoefling",
+                SlackHandle = "LemurLeah",
+                Specialty = "Traveling"
+            };
+
+            C35.AddInstructor(SteveB);
+            C36.AddInstructor(AdamS);
+            C37.AddInstructor(Leah);
         }
     }
 }

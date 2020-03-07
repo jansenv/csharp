@@ -6,11 +6,16 @@ namespace StudentExercises
     {
         public string name { get; set; }
         public List<Student> StudentCollection = new List<Student>();
-        public List<Instructor> InstructorsInCohort = new List<Instructor>();
+        public List<Instructor> InstructorCollection = new List<Instructor>();
 
         public void AddStudent(Student student)
         {
             StudentCollection.Add(student);
+        }
+
+        public void AddInstructor(Instructor instructor)
+        {
+            InstructorCollection.Add(instructor);
         }
     }
 }
