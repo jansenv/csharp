@@ -100,6 +100,8 @@ namespace linq
 
             double sumOfPurchases = purchases.Sum();
 
+            Console.WriteLine($"${sumOfPurchases}");
+
 
 
         }
