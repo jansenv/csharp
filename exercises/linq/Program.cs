@@ -93,16 +93,24 @@ namespace linq
             // Console.WriteLine(count);
 
             // How much money have we made?
-            List<double> purchases = new List<double>()
+            // List<double> purchases = new List<double>()
+            // {
+            //     2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            // };
+
+            // double sumOfPurchases = purchases.Sum();
+
+            // Console.WriteLine($"${sumOfPurchases}");
+
+            // What is our most expensive product?
+            List<double> prices = new List<double>()
             {
-                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+                879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
             };
 
-            double sumOfPurchases = purchases.Sum();
+            double HighestPrice = prices.Max();
 
-            Console.WriteLine($"${sumOfPurchases}");
-
-
+            Console.WriteLine(HighestPrice);
 
         }
     }
