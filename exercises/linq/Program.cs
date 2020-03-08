@@ -28,12 +28,36 @@ namespace linq
             };
 
             IEnumerable<int> fourSixMultiples =
-            numbers.Where(n => n % 4 == 0 || n % 6 == 0).OrderBy(n => n);
+            // numbers.Where(n => n % 4 == 0 || n % 6 == 0).OrderBy(n => n);
+            from number in numbers
+            where number % 4 == 0 || number % 6 == 0
+            orderby number
+            select number;
 
             foreach (int multiple in fourSixMultiples)
             {
                 Console.WriteLine($"{multiple}");
             }
+
+            List<string> names = new List<string>()
+            {
+                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+                "Francisco", "Tre"
+            };
+
+            IEnumerable<string> descend =
+
+            names.OrderByDescending(n => n);
+
+            foreach (string name in descend)
+            {
+                Console.WriteLine($"{name}");
+            };
+
+
 
         }
     }
