@@ -11,12 +11,12 @@ namespace linq
             // RESTRICTION / FILTERING OPERATIONS
 
             // Find the words in the collection that start with the letter 'L'
-            List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
+            // List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
 
-            IEnumerable<string> Lfruits =
-            from fruit in fruits
-            where fruit.StartsWith("L")
-            select fruit;
+            // IEnumerable<string> Lfruits =
+            // from fruit in fruits
+            // where fruit.StartsWith("L")
+            // select fruit;
 
             // foreach (string fruit in Lfruits)
             // {
@@ -24,43 +24,61 @@ namespace linq
             // }
 
             // Which of the following numbers are multiples of 4 or 6
-            List<int> numbers = new List<int>()
-            {
-                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
-            };
+            // List<int> numbers = new List<int>()
+            // {
+            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            // };
 
-            IEnumerable<int> fourSixMultiples =
-            // numbers.Where(n => n % 4 == 0 || n % 6 == 0).OrderBy(n => n);
-            from number in numbers
-            where number % 4 == 0 || number % 6 == 0
-            orderby number
-            select number;
+            // IEnumerable<int> fourSixMultiples =
+            // // numbers.Where(n => n % 4 == 0 || n % 6 == 0).OrderBy(n => n);
+            // from number in numbers
+            // where number % 4 == 0 || number % 6 == 0
+            // orderby number
+            // select number;
 
             // foreach (int multiple in fourSixMultiples)
             // {
             //     Console.WriteLine($"{multiple}");
             // }
 
-            List<string> names = new List<string>()
-            {
-                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
-                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
-                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
-                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
-                "Francisco", "Tre"
-            };
+            // ORDERING OPERATIONS
 
-            IEnumerable<string> descend =
-            // names.OrderByDescending(n => n);
-            from name in names
-            orderby name descending
-            select name;
+            // Order these student names alphabetically, in descending order (Z to A)
+            // List<string> names = new List<string>()
+            // {
+            //     "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+            //     "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+            //     "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+            //     "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+            //     "Francisco", "Tre"
+            // };
 
+            // IEnumerable<string> descend =
+            // // names.OrderByDescending(n => n);
+            // from name in names
+            // orderby name descending
+            // select name;
 
             // foreach (string name in descend)
             // {
             //     Console.WriteLine($"{name}");
             // };
+
+            // Build a collection of these numbers sorted in ascending order
+            List<int> numbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            IEnumerable<int> ascend =
+            from number in numbers
+            orderby number
+            select number;
+
+            foreach (int number in ascend)
+            {
+                Console.WriteLine($"{number}");
+            }
 
 
 
