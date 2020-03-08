@@ -7,8 +7,7 @@ namespace FamilyDictionary
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Dictionary<string, Dictionary<string, string>> myFamily = new Dictionary<string, Dictionary<string, string>>();
+            var myFamily = new Dictionary<string, Dictionary<string, string>>();
 
             myFamily.Add("brother", new Dictionary<string, string>()
             {
@@ -18,7 +17,7 @@ namespace FamilyDictionary
 
             myFamily.Add("mother", new Dictionary<string, string>() {
                 {"name", "Karen"},
-                {"age", "52"}
+                {"age", "53"}
             });
 
             myFamily.Add("father", new Dictionary<string, string>() {
