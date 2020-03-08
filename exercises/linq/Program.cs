@@ -8,6 +8,8 @@ namespace linq
     {
         static void Main(string[] args)
         {
+            // RESTRICTION / FILTERING OPERATIONS
+
             // Find the words in the collection that start with the letter 'L'
             List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
 
@@ -34,10 +36,10 @@ namespace linq
             orderby number
             select number;
 
-            foreach (int multiple in fourSixMultiples)
-            {
-                Console.WriteLine($"{multiple}");
-            }
+            // foreach (int multiple in fourSixMultiples)
+            // {
+            //     Console.WriteLine($"{multiple}");
+            // }
 
             List<string> names = new List<string>()
             {
@@ -49,13 +51,16 @@ namespace linq
             };
 
             IEnumerable<string> descend =
+            // names.OrderByDescending(n => n);
+            from name in names
+            orderby name descending
+            select name;
 
-            names.OrderByDescending(n => n);
 
-            foreach (string name in descend)
-            {
-                Console.WriteLine($"{name}");
-            };
+            // foreach (string name in descend)
+            // {
+            //     Console.WriteLine($"{name}");
+            // };
 
 
 
