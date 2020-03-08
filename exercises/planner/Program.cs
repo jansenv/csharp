@@ -42,18 +42,13 @@ namespace Planner
 
             // Console.WriteLine("NSS");
 
-            City megalopolis = new City()
-            {
-                name = "Megalopolis",
-                mayor = "Superman",
-                year = 1933
-            };
+            City Megalopolis = new City("Megalopolis", "Superman", 1933);
 
-            megalopolis.AddBuilding(FiveOneTwoEighth);
-            megalopolis.AddBuilding(OldNSS);
-            megalopolis.AddBuilding(NSS);
+            Megalopolis.AddBuilding(FiveOneTwoEighth);
+            Megalopolis.AddBuilding(OldNSS);
+            Megalopolis.AddBuilding(NSS);
 
-            foreach (Building building in megalopolis.Buildings)
+            foreach (Building building in Megalopolis.Buildings)
             {
                 Console.WriteLine(building);
             }
