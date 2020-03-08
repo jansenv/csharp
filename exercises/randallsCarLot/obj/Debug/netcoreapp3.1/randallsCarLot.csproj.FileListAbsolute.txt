@@ -1,0 +1,11 @@
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.exe
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.deps.json
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.runtimeconfig.json
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.runtimeconfig.dev.json
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.dll
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\bin\Debug\netcoreapp3.1\randallsCarLot.pdb
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\obj\Debug\netcoreapp3.1\randallsCarLot.csprojAssemblyReference.cache
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\obj\Debug\netcoreapp3.1\randallsCarLot.AssemblyInfoInputs.cache
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\obj\Debug\netcoreapp3.1\randallsCarLot.AssemblyInfo.cs
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\obj\Debug\netcoreapp3.1\randallsCarLot.dll
+C:\Users\janse\workspace\csharp\exercises\randallsCarLot\obj\Debug\netcoreapp3.1\randallsCarLot.pdb
