@@ -65,20 +65,40 @@ namespace linq
             // };
 
             // Build a collection of these numbers sorted in ascending order
-            List<int> numbers = new List<int>()
+            // List<int> numbers = new List<int>()
+            // {
+            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            // };
+
+            // IEnumerable<int> ascend =
+            // from number in numbers
+            // orderby number
+            // select number;
+
+            // foreach (int number in ascend)
+            // {
+            //     Console.WriteLine($"{number}");
+            // }
+
+            // AGGREGATE OPERATIONS
+
+            // Output how many numbers are in this list
+            // List<int> numbers = new List<int>()
+            // {
+            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            // };
+
+            // var count = numbers.Count();
+
+            // Console.WriteLine(count);
+
+            // How much money have we made?
+            List<double> purchases = new List<double>()
             {
-                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
             };
 
-            IEnumerable<int> ascend =
-            from number in numbers
-            orderby number
-            select number;
-
-            foreach (int number in ascend)
-            {
-                Console.WriteLine($"{number}");
-            }
+            double sumOfPurchases = purchases.Sum();
 
 
 
