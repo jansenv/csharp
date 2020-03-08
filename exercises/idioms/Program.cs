@@ -21,8 +21,8 @@ namespace idioms
 
             foreach (KeyValuePair<string, List<string>> idiom in idioms)
             {
-                string sentenceString = String.Join(" ", idiom.Value);
-                Console.WriteLine($"{idiom.Key}: {sentenceString}");
+
+                Console.WriteLine($"{idiom.Key}: {String.Join(" ", idiom.Value)}");
             }
         }
     }
