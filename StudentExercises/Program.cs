@@ -90,7 +90,8 @@ namespace StudentExercises
                 FirstName = "Steve",
                 LastName = "Brownlee",
                 SlackHandle = "choortlehort",
-                Specialty = "Dad Jokes"
+                Specialty = "Dad Jokes",
+                Cohort = "Cohort 35"
             };
 
             Instructor AdamS = new Instructor()
@@ -98,7 +99,8 @@ namespace StudentExercises
                 FirstName = "Adam",
                 LastName = "Sheaffer",
                 SlackHandle = "AdamS",
-                Specialty = "var"
+                Specialty = "var",
+                Cohort = "Cohort 36"
             };
 
             Instructor Leah = new Instructor()
@@ -106,7 +108,8 @@ namespace StudentExercises
                 FirstName = "Leah",
                 LastName = "Hoefling",
                 SlackHandle = "LemurLeah",
-                Specialty = "Traveling"
+                Specialty = "Traveling",
+                Cohort = "Cohort 37"
             };
 
             C35.AddInstructor(SteveB);
@@ -205,6 +208,18 @@ namespace StudentExercises
             // {
             //     Console.WriteLine(student.FirstName);
             // }
+
+            IEnumerable<Instructor> InstructorsInCohort37 =
+            from instructor in instructors
+            where instructor.Cohort == "Cohort 37"
+            select instructor;
+
+            foreach (Instructor instructor in InstructorsInCohort37)
+            {
+                Console.WriteLine(instructor.FirstName);
+            };
+
+
         }
     }
 }
