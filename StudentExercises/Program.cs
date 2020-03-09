@@ -209,16 +209,25 @@ namespace StudentExercises
             //     Console.WriteLine(student.FirstName);
             // }
 
-            IEnumerable<Instructor> InstructorsInCohort37 =
-            from instructor in instructors
-            where instructor.Cohort == "Cohort 37"
-            select instructor;
+            // IEnumerable<Instructor> InstructorsInCohort37 =
+            // from instructor in instructors
+            // where instructor.Cohort == "Cohort 37"
+            // select instructor;
 
-            foreach (Instructor instructor in InstructorsInCohort37)
+            // foreach (Instructor instructor in InstructorsInCohort37)
+            // {
+            //     Console.WriteLine(instructor.FirstName);
+            // };
+
+            IEnumerable<Student> StudentsByLastName =
+            from student in students
+            orderby student.LastName descending
+            select student;
+
+            foreach (Student student in StudentsByLastName)
             {
-                Console.WriteLine(instructor.FirstName);
-            };
-
+                Console.WriteLine(student.LastName);
+            }
 
         }
     }
