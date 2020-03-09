@@ -1,13 +1,16 @@
+using System;
+
 namespace inheritanceIntro
 {
 
-    public class Ram
+    public class Ram : Vehicle
     {  // Gas powered truck
         public double FuelCapacity { get; set; }
-        public string MainColor { get; set; }
-        public string MaximumOccupancy { get; set; }
-
         public void RefuelTank() { }
+        public override void Drive()
+        {
+            Console.WriteLine($"The {MainColor} Ram goes MRRRRRRM!");
+        }
     }
 
 
