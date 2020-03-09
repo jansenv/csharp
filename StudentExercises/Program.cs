@@ -249,16 +249,17 @@ namespace StudentExercises
             //     Console.WriteLine(student.FirstName);
             // }
 
-            // IEnumerable<Student> StudentWithMostExercises =
-            // from student in students
-            // orderby student.Exercises.Count()
-            // select student;
+            IEnumerable<Student> StudentWithMostExercises =
+            from student in students
+            orderby student.Exercises.Count() descending
+            select student;
 
-            // foreach (Student student in StudentWithMostExercises)
-            // {
-            //     Console.WriteLine(student.FirstName);
-            // }
+            var overachiever = StudentWithMostExercises.FirstOrDefault();
 
+            Console.WriteLine(overachiever.FirstName);
+
+            // IEnumerable<Student> StudentsPerCohort =
+            // from
         }
     }
 }
