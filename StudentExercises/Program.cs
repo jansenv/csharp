@@ -80,6 +80,14 @@ namespace StudentExercises
                 Cohort = "Cohort 37"
             };
 
+            Student SlackerStudent = new Student()
+            {
+                FirstName = "Slacker",
+                LastName = "McGee",
+                SlackHandle = "SM",
+                Cohort = "Cohort 37"
+            };
+
             C35.AddStudent(Sage);
             C36.AddStudent(RyanB);
             C37.AddStudent(JohnG);
@@ -148,6 +156,7 @@ namespace StudentExercises
             students.Add(RyanB);
             students.Add(JohnG);
             students.Add(SpencerT);
+            students.Add(SlackerStudent);
 
             List<Exercise> exercises = new List<Exercise>();
             exercises.Add(MartinsAquarium);
@@ -219,15 +228,25 @@ namespace StudentExercises
             //     Console.WriteLine(instructor.FirstName);
             // };
 
-            IEnumerable<Student> StudentsByLastName =
-            from student in students
-            orderby student.LastName descending
-            select student;
+            // IEnumerable<Student> StudentsByLastName =
+            // from student in students
+            // orderby student.LastName descending
+            // select student;
 
-            foreach (Student student in StudentsByLastName)
-            {
-                Console.WriteLine(student.LastName);
-            }
+            // foreach (Student student in StudentsByLastName)
+            // {
+            //     Console.WriteLine(student.LastName);
+            // }
+
+            // IEnumerable<Student> StudentsWithoutExercises =
+            // from student in students
+            // where student.Exercises.Count == 0
+            // select student;
+
+            // foreach (Student student in StudentsWithoutExercises)
+            // {
+            //     Console.WriteLine(student.FirstName);
+            // }
 
         }
     }
