@@ -52,28 +52,32 @@ namespace StudentExercises
             {
                 FirstName = "Sage",
                 LastName = "Foo",
-                SlackHandle = "SageFoo"
+                SlackHandle = "SageFoo",
+                Cohort = "Cohort 35"
             };
 
             Student RyanB = new Student()
             {
                 FirstName = "Ryan",
                 LastName = "Bishop",
-                SlackHandle = "RyanB"
+                SlackHandle = "RyanB",
+                Cohort = "Cohort 36"
             };
 
             Student JohnG = new Student()
             {
                 FirstName = "John",
                 LastName = "Gilliam",
-                SlackHandle = "JG"
+                SlackHandle = "JG",
+                Cohort = "Cohort 37"
             };
 
             Student SpencerT = new Student()
             {
                 FirstName = "Spencer",
                 LastName = "Truett",
-                SlackHandle = "ST"
+                SlackHandle = "ST",
+                Cohort = "Cohort 37"
             };
 
             C35.AddStudent(Sage);
@@ -182,15 +186,25 @@ namespace StudentExercises
 
             // List exercises for the JavaScript language by using the Where() LINQ method.
 
-            IEnumerable<Exercise> JavaScriptExercises =
-            from exercise in exercises
-            where exercise.language == "JavaScript"
-            select exercise;
+            // IEnumerable<Exercise> JavaScriptExercises =
+            // from exercise in exercises
+            // where exercise.language == "JavaScript"
+            // select exercise;
 
-            foreach (Exercise exercise in JavaScriptExercises)
-            {
-                Console.WriteLine(exercise.name);
-            }
+            // foreach (Exercise exercise in JavaScriptExercises)
+            // {
+            //     Console.WriteLine(exercise.name);
+            // }
+
+            // IEnumerable<Student> StudentsInCohort37 =
+            // from student in students
+            // where student.Cohort == "Cohort 37"
+            // select student;
+
+            // foreach (Student student in StudentsInCohort37)
+            // {
+            //     Console.WriteLine(student.FirstName);
+            // }
         }
     }
 }
