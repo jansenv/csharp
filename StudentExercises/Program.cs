@@ -132,6 +132,7 @@ namespace StudentExercises
             SteveB.assignExercise(JohnG, Nutshell);
             SteveB.assignExercise(SpencerT, CongressionalRep);
             SteveB.assignExercise(SpencerT, Nutshell);
+            SteveB.assignExercise(SpencerT, MartinsAquarium);
 
             AdamS.assignExercise(Sage, Nutshell);
             AdamS.assignExercise(Sage, Buildings);
@@ -244,6 +245,16 @@ namespace StudentExercises
             // select student;
 
             // foreach (Student student in StudentsWithoutExercises)
+            // {
+            //     Console.WriteLine(student.FirstName);
+            // }
+
+            // IEnumerable<Student> StudentWithMostExercises =
+            // from student in students
+            // orderby student.Exercises.Count()
+            // select student;
+
+            // foreach (Student student in StudentWithMostExercises)
             // {
             //     Console.WriteLine(student.FirstName);
             // }
