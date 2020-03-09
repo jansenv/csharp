@@ -23,9 +23,20 @@ namespace inheritanceIntro
             myCessna.MainColor = "Drug runner White";
 
             myBike.Drive();
+            myBike.Turn();
+            myBike.Stop();
+
             myTesla.Drive();
+            myTesla.Turn();
+            myTesla.Stop();
+
             myRam.Drive();
+            myRam.Turn();
+            myRam.Stop();
+
             myCessna.Drive();
+            myCessna.Turn();
+            myCessna.Stop();
 
             Console.WriteLine(myTesla);
 

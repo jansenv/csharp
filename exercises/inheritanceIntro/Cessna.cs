@@ -11,6 +11,10 @@ namespace inheritanceIntro
         {
             Console.WriteLine($"The {MainColor} Cessna goes Schwing!");
         }
+        public override void Turn()
+        {
+            Console.WriteLine($"The {MainColor} Cessna does a barrell roll right");
+        }
 
     }
 

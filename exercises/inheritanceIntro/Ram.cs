@@ -11,6 +11,10 @@ namespace inheritanceIntro
         {
             Console.WriteLine($"The {MainColor} Ram goes MRRRRRRM!");
         }
+        public override void Stop()
+        {
+            Console.WriteLine($"The {MainColor} Ram screeches to a halt.");
+        }
     }
 
 

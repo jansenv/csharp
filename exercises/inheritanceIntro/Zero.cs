@@ -10,6 +10,10 @@ namespace inheritanceIntro
         {
             Console.WriteLine($"The {MainColor} Zero goes Bzzzzzz");
         }
+        public override void Turn()
+        {
+            Console.WriteLine($"The {MainColor} Zero does a sick J-turn");
+        }
     }
 
 }
