@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StudentExercises
 {
@@ -145,6 +147,50 @@ namespace StudentExercises
             exercises.Add(CongressionalRep);
             exercises.Add(Buildings);
             exercises.Add(Nutshell);
+
+            List<Instructor> instructors = new List<Instructor>();
+            instructors.Add(SteveB);
+            instructors.Add(AdamS);
+            instructors.Add(Leah);
+
+            List<Cohort> cohorts = new List<Cohort>();
+            cohorts.Add(C35);
+            cohorts.Add(C36);
+            cohorts.Add(C37);
+
+
+            // foreach (Exercise exercise in exercises)
+            // {
+            //     Console.WriteLine($"{exercise.name}:");
+
+            //     foreach (Student student in students)
+            //     {
+            //         foreach (Exercise studentExercise in student.Exercises)
+            //         {
+            //             if (exercise.name == studentExercise.name)
+            //             {
+            //                 Console.WriteLine($"{student.FirstName} {student.LastName}");
+
+            //             }
+
+            //         }
+
+            //     }
+            //     Console.WriteLine($"--------------------");
+
+            // }
+
+            // List exercises for the JavaScript language by using the Where() LINQ method.
+
+            IEnumerable<Exercise> JavaScriptExercises =
+            from exercise in exercises
+            where exercise.language == "JavaScript"
+            select exercise;
+
+            foreach (Exercise exercise in JavaScriptExercises)
+            {
+                Console.WriteLine(exercise.name);
+            }
         }
     }
 }
