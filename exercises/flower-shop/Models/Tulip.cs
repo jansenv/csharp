@@ -2,7 +2,7 @@ using System;
 
 namespace flower_shop
 {
-    class Tulip
+    class Tulip : IBirthday
     {
         public string Color { get; set; }
         public string Name { get; set; }

@@ -10,14 +10,28 @@ namespace flower_shop
         public List<Rose> RoseList { get; set; } = new List<Rose>();
         public List<Tulip> TulipList { get; set; } = new List<Tulip>();
 
-        // public MakeMothersDayArrangement()
-        // {
+        public List<IMothersDay> MakeMothersDayArrangement()
+        {
+            List<IMothersDay> Arrangement = new List<IMothersDay>();
+            Arrangement.Add(new Gardenia());
+            Arrangement.Add(new Gardenia());
+            Arrangement.Add(new Orchid());
+            Arrangement.Add(new Orchid());
+            Arrangement.Add(new Orchid());
 
-        // }
+            return Arrangement;
+        }
 
-        // public MakeBirthdayArrangement()
-        // {
+        public List<IBirthday> MakeBirthdayArrangement()
+        {
+            List<IBirthday> Arrangement = new List<IBirthday>();
+            Arrangement.Add(new Rose());
+            Arrangement.Add(new Rose());
+            Arrangement.Add(new Rose());
+            Arrangement.Add(new Tulip());
+            Arrangement.Add(new Tulip());
 
-        // }
+            return Arrangement;
+        }
     }
 }
