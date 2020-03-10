@@ -2,7 +2,7 @@ using System;
 
 namespace flower_shop
 {
-    class Gardenia
+    class Orchid : IMothersDay
     {
         public string Color { get; set; }
         public string Name { get; set; }
@@ -11,5 +11,7 @@ namespace flower_shop
         public string WaterSchedule { get; set; }
         public bool IsAWeed { get; set; }
         public bool Fragrant { get; set; }
+        public double StemLength { get; set; }
+
     }
 }

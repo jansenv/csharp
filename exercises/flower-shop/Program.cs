@@ -24,6 +24,15 @@ namespace flower_shop
             Gardenia.IsAWeed = false;
             Gardenia.Fragrant = true;
 
+            Orchid Orchid = new Orchid();
+            Orchid.Color = "Purple";
+            Orchid.Name = "Orc";
+            Orchid.Type = "Orchid";
+            Orchid.Cost = 29.00;
+            Orchid.WaterSchedule = "Every 2 days";
+            Orchid.IsAWeed = true;
+            Orchid.Fragrant = true;
+
             Tulip Tulip = new Tulip();
             Tulip.Color = "Rainbow";
             Tulip.Name = "Tulip Terry";
