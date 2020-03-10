@@ -38,6 +38,8 @@ namespace flower_shop
         {
             List<IGetWell> Arrangement = new List<IGetWell>();
             Arrangement.Add(new Crabgrass());
+            Arrangement.Add(new Crabgrass());
+            Arrangement.Add(new Crabgrass());
 
             return Arrangement;
         }

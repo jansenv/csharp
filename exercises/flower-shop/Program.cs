@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace flower_shop
 {
@@ -41,6 +42,9 @@ namespace flower_shop
             Tulip.WaterSchedule = "Never";
             Tulip.CanTiptoeThrough = true;
             Tulip.Fragrant = false;
+
+            FlowerShop MacsFlowerShop = new FlowerShop();
+            List<IBirthday> Arrangement = MacsFlowerShop.MakeBirthdayArrangement();
 
         }
     }
