@@ -33,5 +33,13 @@ namespace flower_shop
 
             return Arrangement;
         }
+
+        public List<IGetWell> MakeGetWellArrangement()
+        {
+            List<IGetWell> Arrangement = new List<IGetWell>();
+            Arrangement.Add(new Crabgrass());
+
+            return Arrangement;
+        }
     }
 }
