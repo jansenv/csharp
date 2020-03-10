@@ -4,12 +4,12 @@ namespace flower_shop
 {
     class Rose
     {
-        public string color { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
-        public decimal cost { get; set; }
-        public string waterSchedule { get; set; }
-        public bool thorny { get; set; }
-        public bool fragrant { get; set; }
+        public string Color { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public double Cost { get; set; }
+        public string WaterSchedule { get; set; }
+        public bool Thorny { get; set; }
+        public bool Fragrant { get; set; }
     }
 }
