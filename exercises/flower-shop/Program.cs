@@ -14,6 +14,25 @@ namespace flower_shop
             MrThorny.WaterSchedule = "Every Tuesday at 3pm";
             MrThorny.Thorny = true;
             MrThorny.Fragrant = false;
+
+            Gardenia Gardenia = new Gardenia();
+            Gardenia.Color = "White";
+            Gardenia.Name = "Ms. G";
+            Gardenia.Type = "Gardenia";
+            Gardenia.Cost = 1.00;
+            Gardenia.WaterSchedule = "Every other week";
+            Gardenia.IsAWeed = false;
+            Gardenia.Fragrant = true;
+
+            Tulip Tulip = new Tulip();
+            Tulip.Color = "Rainbow";
+            Tulip.Name = "Tulip Terry";
+            Tulip.Type = "Tulip";
+            Tulip.Cost = 0.29;
+            Tulip.WaterSchedule = "Never";
+            Tulip.CanTiptoeThrough = true;
+            Tulip.Fragrant = false;
+
         }
     }
 }
