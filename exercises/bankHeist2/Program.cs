@@ -26,51 +26,58 @@ namespace bankHeist2
             rolodex.Add(Aja);
             rolodex.Add(Garrett);
 
-            Console.WriteLine($"There are {rolodex.Count} current operatives.");
-            Console.WriteLine("Who would you like to add to the rolodex?");
-            string newRobberName = Console.ReadLine();
-            Console.WriteLine("Enter their specialty: ");
-            Console.WriteLine("Hacker (Disables Alarms)");
-            Console.WriteLine("Muscle (Disarms Guards)");
-            Console.WriteLine("Lock Specialist (Cracks Vault)");
-            string newRobberSpeciality = Console.ReadLine();
-            Console.WriteLine("Enter their skill level (1-100): ");
-            int newRobberSkill = int.Parse(Console.ReadLine());
-            Console.WriteLine("What percentage of the cut should they get?");
-            int newRobberCut = int.Parse(Console.ReadLine());
-
-            if (newRobberSpeciality == "Hacker")
+            while (true)
             {
-                Hacker hacker = new Hacker()
+                Console.WriteLine($"There are {rolodex.Count} current operatives.");
+                Console.WriteLine("Who would you like to add to the rolodex?");
+                string newRobberName = Console.ReadLine();
+                if (newRobberName == "")
                 {
-                    Name = newRobberName,
-                    SkillLevel = newRobberSkill,
-                    PercentageCut = newRobberCut,
-                };
+                    break;
+                }
+                Console.WriteLine("Enter their specialty: ");
+                Console.WriteLine("Hacker (Disables Alarms)");
+                Console.WriteLine("Muscle (Disarms Guards)");
+                Console.WriteLine("Lock Specialist (Cracks Vault)");
+                string newRobberSpeciality = Console.ReadLine();
+                Console.WriteLine("Enter their skill level (1-100): ");
+                int newRobberSkill = int.Parse(Console.ReadLine());
+                Console.WriteLine("What percentage of the cut should they get?");
+                int newRobberCut = int.Parse(Console.ReadLine());
 
-                rolodex.Add(hacker);
-            }
-            else if (newRobberSpeciality == "Muscle")
-            {
-                Muscle muscle = new Muscle()
+                if (newRobberSpeciality == "Hacker")
                 {
-                    Name = newRobberName,
-                    SkillLevel = newRobberSkill,
-                    PercentageCut = newRobberCut,
-                };
+                    Hacker hacker = new Hacker()
+                    {
+                        Name = newRobberName,
+                        SkillLevel = newRobberSkill,
+                        PercentageCut = newRobberCut,
+                    };
 
-                rolodex.Add(muscle);
-            }
-            else if (newRobberSpeciality == "Lock Specialist")
-            {
-                LockSpecialist lockSpecialist = new LockSpecialist()
+                    rolodex.Add(hacker);
+                }
+                else if (newRobberSpeciality == "Muscle")
                 {
-                    Name = newRobberName,
-                    SkillLevel = newRobberSkill,
-                    PercentageCut = newRobberCut,
-                };
+                    Muscle muscle = new Muscle()
+                    {
+                        Name = newRobberName,
+                        SkillLevel = newRobberSkill,
+                        PercentageCut = newRobberCut,
+                    };
 
-                rolodex.Add(lockSpecialist);
+                    rolodex.Add(muscle);
+                }
+                else if (newRobberSpeciality == "Lock Specialist")
+                {
+                    LockSpecialist lockSpecialist = new LockSpecialist()
+                    {
+                        Name = newRobberName,
+                        SkillLevel = newRobberSkill,
+                        PercentageCut = newRobberCut,
+                    };
+
+                    rolodex.Add(lockSpecialist);
+                }
             }
         }
     }
