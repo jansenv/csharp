@@ -8,6 +8,12 @@ namespace bankHeist2
         static void Main(string[] args)
         {
             List<IRobber> rolodex = new List<IRobber>();
+            Hacker Audrey = new Hacker();
+            Hacker Willy = new Hacker();
+            LockSpecialist Holden = new LockSpecialist();
+            LockSpecialist Kevin = new LockSpecialist();
+            Muscle Aja = new Muscle();
+            Muscle Garrett = new Muscle();
         }
     }
 }
