@@ -7,10 +7,20 @@ namespace ZoologicalZaniness
     {
         static void Main(string[] args)
         {
-            List<Digging> DiggersContainer = new List<Digging>();
-            List<Flying> FlyersContainer = new List<Flying>();
-            List<Moving> MoversContainer = new List<Moving>();
-            List<Swimming> SwimmersContainer = new List<Swimming>();
+            Digging diggers = new Digging();
+            Flying flyers = new Flying();
+            Moving movers = new Moving();
+            Swimming swimmers = new Swimming();
+
+            Ant Bobby = new Ant();
+            BettaFish Brandy = new BettaFish();
+            CopperheadSnake Bubs = new CopperheadSnake();
+            Finch Brady = new Finch();
+
+            diggers.DiggingAnimalsContainer.Add(Bobby);
+            flyers.FlyingAnimalsContainer.Add(Brady);
+            movers.MovingAnimalsContainer.Add(Bubs);
+            swimmers.SwimmingAnimalsContainer.Add(Brandy);
         }
     }
 }
