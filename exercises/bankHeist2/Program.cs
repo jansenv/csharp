@@ -27,7 +27,15 @@ namespace bankHeist2
             rolodex.Add(Garrett);
 
             Console.WriteLine($"There are {rolodex.Count} current operatives.");
-            Console.ReadLine($"Who would you like to add to the rolodex?");
+            Console.WriteLine("Who would you like to add to the rolodex?");
+            var newRobberName = Console.ReadLine();
+            Console.WriteLine("Enter their specialty: ");
+            Console.WriteLine("Hacker (Disables Alarms)");
+            Console.WriteLine("Muscle (Disarms Guards)");
+            Console.WriteLine("Lock Specialist (Cracks Vault)");
+            var newRobberSpeciality = Console.ReadLine();
+            Console.WriteLine("Enter their skill level (1-100): ");
+            var newRobberSkill = Console.ReadLine();
         }
     }
 }
