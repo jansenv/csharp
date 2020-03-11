@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ZoologicalZaniness
 {
@@ -6,7 +7,10 @@ namespace ZoologicalZaniness
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Digging> DiggersContainer = new List<Digging>();
+            List<Flying> FlyersContainer = new List<Flying>();
+            List<Moving> MoversContainer = new List<Moving>();
+            List<Swimming> SwimmersContainer = new List<Swimming>();
         }
     }
 }
