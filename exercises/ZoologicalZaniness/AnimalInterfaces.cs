@@ -12,4 +12,22 @@ namespace ZoologicalZaniness
         void Swim();
     }
 
+    public interface IDigging
+    {
+        int MaximumDepth { get; }
+        void Dig();
+    }
+
+    public interface IMoving
+    {
+        int MaximumSpeed { get; }
+        void Move();
+    }
+
+    public interface IFlying
+    {
+        int MaximumHeight { get; }
+        void Fly();
+    }
+
 }
