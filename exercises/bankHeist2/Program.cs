@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace bankHeist2
 {
@@ -6,7 +7,7 @@ namespace bankHeist2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<IRobber> rolodex = new List<IRobber>();
         }
     }
 }
