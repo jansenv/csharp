@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace bankHeist2
 {
@@ -86,6 +87,24 @@ namespace bankHeist2
                 var VaultScore = randy.Next(0, 101);
                 var SecurityGuardScore = randy.Next(0, 101);
                 var CashOnHand = randy.Next(50000, 1000001);
+
+                Dictionary<string, int> SecurityScores = new Dictionary<string, int>();
+                SecurityScores.Add("Alarm", AlarmScore);
+                SecurityScores.Add("Vault", VaultScore);
+                SecurityScores.Add("Security Guard", SecurityGuardScore);
+                var OrderedScores = SecurityScores.OrderBy(score => score.Value);
+                var mostSecure = OrderedScores.Last();
+                var leastSecure = OrderedScores.First();
+                Console.WriteLine($"Most secure: {mostSecure.Key}");
+                Console.WriteLine($"Least secure: {leastSecure.Key}");
+
+                foreach (var crewMember in rolodex)
+                {
+                    Console.WriteLine($"{crewMember.Name}");
+                    Console.WriteLine($"{crewMember}");
+                    Console.WriteLine($"{crewMember.SkillLevel}");
+                    Console.WriteLine($"{crewMember.PercentageCut}");
+                }
             }
         }
     }
