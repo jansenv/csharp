@@ -28,14 +28,50 @@ namespace bankHeist2
 
             Console.WriteLine($"There are {rolodex.Count} current operatives.");
             Console.WriteLine("Who would you like to add to the rolodex?");
-            var newRobberName = Console.ReadLine();
+            string newRobberName = Console.ReadLine();
             Console.WriteLine("Enter their specialty: ");
             Console.WriteLine("Hacker (Disables Alarms)");
             Console.WriteLine("Muscle (Disarms Guards)");
             Console.WriteLine("Lock Specialist (Cracks Vault)");
-            var newRobberSpeciality = Console.ReadLine();
+            string newRobberSpeciality = Console.ReadLine();
             Console.WriteLine("Enter their skill level (1-100): ");
-            var newRobberSkill = Console.ReadLine();
+            int newRobberSkill = int.Parse(Console.ReadLine());
+            Console.WriteLine("What percentage of the cut should they get?");
+            int newRobberCut = int.Parse(Console.ReadLine());
+
+            if (newRobberSpeciality == "Hacker")
+            {
+                Hacker hacker = new Hacker()
+                {
+                    Name = newRobberName,
+                    SkillLevel = newRobberSkill,
+                    PercentageCut = newRobberCut,
+                };
+
+                rolodex.Add(hacker);
+            }
+            else if (newRobberSpeciality == "Muscle")
+            {
+                Muscle muscle = new Muscle()
+                {
+                    Name = newRobberName,
+                    SkillLevel = newRobberSkill,
+                    PercentageCut = newRobberCut,
+                };
+
+                rolodex.Add(muscle);
+            }
+            else if (newRobberSpeciality == "Lock Specialist")
+            {
+                LockSpecialist lockSpecialist = new LockSpecialist()
+                {
+                    Name = newRobberName,
+                    SkillLevel = newRobberSkill,
+                    PercentageCut = newRobberCut,
+                };
+
+                rolodex.Add(lockSpecialist);
+            }
         }
     }
 }
