@@ -12,12 +12,47 @@ namespace bankHeist2
             List<IRobber> rolodex = new List<IRobber>();
 
             //Instantiate some robbers
-            Hacker Audrey = new Hacker();
-            Hacker Willy = new Hacker();
-            LockSpecialist Holden = new LockSpecialist();
-            LockSpecialist Kevin = new LockSpecialist();
-            Muscle Aja = new Muscle();
-            Muscle Garrett = new Muscle();
+            Hacker Audrey = new Hacker()
+            {
+                Name = "Audrey Borgra",
+                Title = "Hacker",
+                SkillLevel = 84,
+                PercentageCut = 14
+            };
+            Hacker Willy = new Hacker()
+            {
+                Name = "Willy Metcalf",
+                Title = "Hacker",
+                SkillLevel = 87,
+                PercentageCut = 15
+            };
+            LockSpecialist Holden = new LockSpecialist()
+            {
+                Name = "Holden Parker",
+                Title = "Lock Specialist",
+                SkillLevel = 69,
+                PercentageCut = 4
+            };
+            LockSpecialist Kevin = new LockSpecialist()
+            {
+                Name = "Kevin Penny",
+                Title = "Lock Specialist",
+                SkillLevel = 74,
+                PercentageCut = 6
+            };
+            Muscle Aja = new Muscle()
+            {
+                Name = "Aja Washington",
+                Title = "Muscle",
+                SkillLevel = 90,
+                PercentageCut = 11
+            };
+            Muscle Garrett = new Muscle()
+            {
+                Name = "Garrett Freshwater",
+                Title = "Muscle",
+                SkillLevel = 65
+            };
 
             //Add robbers to the rolodex
             rolodex.Add(Audrey);
@@ -51,6 +86,7 @@ namespace bankHeist2
                     Hacker hacker = new Hacker()
                     {
                         Name = newRobberName,
+                        Title = newRobberSpeciality,
                         SkillLevel = newRobberSkill,
                         PercentageCut = newRobberCut,
                     };
@@ -62,6 +98,7 @@ namespace bankHeist2
                     Muscle muscle = new Muscle()
                     {
                         Name = newRobberName,
+                        Title = newRobberSpeciality,
                         SkillLevel = newRobberSkill,
                         PercentageCut = newRobberCut,
                     };
@@ -73,6 +110,7 @@ namespace bankHeist2
                     LockSpecialist lockSpecialist = new LockSpecialist()
                     {
                         Name = newRobberName,
+                        Title = newRobberSpeciality,
                         SkillLevel = newRobberSkill,
                         PercentageCut = newRobberCut,
                     };
@@ -95,16 +133,22 @@ namespace bankHeist2
                 var OrderedScores = SecurityScores.OrderBy(score => score.Value);
                 var mostSecure = OrderedScores.Last();
                 var leastSecure = OrderedScores.First();
+
+                Console.WriteLine("-----------RECON REPORT----------");
+
                 Console.WriteLine($"Most secure: {mostSecure.Key}");
                 Console.WriteLine($"Least secure: {leastSecure.Key}");
 
                 foreach (var crewMember in rolodex)
                 {
-                    Console.WriteLine($"{crewMember.Name}");
-                    Console.WriteLine($"{crewMember}");
-                    Console.WriteLine($"{crewMember.SkillLevel}");
-                    Console.WriteLine($"{crewMember.PercentageCut}");
+                    Console.WriteLine($"Crewmember Index: {rolodex.IndexOf(crewMember)}");
+                    Console.WriteLine($"Name: {crewMember.Name}");
+                    Console.WriteLine($"Title: {crewMember.Title}");
+                    Console.WriteLine($"Skill: {crewMember.SkillLevel}");
+                    Console.WriteLine($"Percentage cut: {crewMember.PercentageCut}");
                 }
+
+                Console.WriteLine("-------------------------");
             }
         }
     }
