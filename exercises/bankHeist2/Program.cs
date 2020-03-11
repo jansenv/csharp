@@ -78,6 +78,14 @@ namespace bankHeist2
 
                     rolodex.Add(lockSpecialist);
                 }
+
+                Random random = new Random();
+                Bank TestBank = new Bank();
+                Random randy = new Random();
+                var AlarmScore = randy.Next(0, 101);
+                var VaultScore = randy.Next(0, 101);
+                var SecurityGuardScore = randy.Next(0, 101);
+                var CashOnHand = randy.Next(50000, 1000001);
             }
         }
     }
