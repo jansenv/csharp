@@ -1,0 +1,11 @@
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.exe
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.deps.json
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.runtimeconfig.json
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.runtimeconfig.dev.json
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.dll
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\bin\Debug\netcoreapp3.1\GenericsConsole.pdb
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.csprojAssemblyReference.cache
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.AssemblyInfoInputs.cache
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.AssemblyInfo.cs
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.dll
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.pdb
