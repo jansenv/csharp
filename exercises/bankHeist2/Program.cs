@@ -62,6 +62,7 @@ namespace bankHeist2
             rolodex.Add(Aja);
             rolodex.Add(Garrett);
 
+
             while (true)
             {
                 Console.WriteLine($"There are {rolodex.Count} current operatives.");
@@ -149,6 +150,12 @@ namespace bankHeist2
                 }
 
                 Console.WriteLine("-------------------------");
+
+                List<IRobber> MyCrew = new List<IRobber>();
+
+
+
+
             }
         }
     }
