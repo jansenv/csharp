@@ -151,11 +151,24 @@ namespace bankHeist2
 
                 Console.WriteLine("-------------------------");
 
-                List<IRobber> MyCrew = new List<IRobber>();
+                List<IRobber> crew = new List<IRobber>();
 
-
-
-
+                while (true)
+                {
+                    Console.WriteLine("Enter the index # of the crew member you want");
+                    string selectedCrewMember = Console.ReadLine();
+                    if (selectedCrewMember == "")
+                    {
+                        break;
+                    }
+                    foreach (var crewMember in rolodex)
+                    {
+                        if (int.Parse(selectedCrewMember) == rolodex.IndexOf(crewMember))
+                        {
+                            crew.Add(crewMember);
+                        }
+                    }
+                }
             }
         }
     }
