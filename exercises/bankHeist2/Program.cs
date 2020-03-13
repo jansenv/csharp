@@ -154,6 +154,7 @@ namespace bankHeist2
             Console.WriteLine("-------------------------");
 
             List<IRobber> crew = new List<IRobber>();
+            int MaxCut = 100;
 
             while (true)
             {
@@ -169,6 +170,8 @@ namespace bankHeist2
                     {
                         crew.Add(crewMember);
                         rolodex.Remove(crewMember);
+                        MaxCut = MaxCut - crewMember.PercentageCut;
+                        Console.WriteLine($"{MaxCut} is the max % cut left.");
                         break;
                     }
                 }
@@ -182,15 +185,18 @@ namespace bankHeist2
                     Console.WriteLine($"Percentage cut: {crewMate.PercentageCut}\n");
                 }
 
-                Console.WriteLine("Still available:\n");
+                Console.WriteLine("These recruits are still available:\n");
 
                 foreach (var crewMember in rolodex)
                 {
-                    Console.WriteLine($"Crewmember Index: {rolodex.IndexOf(crewMember)}");
-                    Console.WriteLine($"Name: {crewMember.Name}");
-                    Console.WriteLine($"Title: {crewMember.Title}");
-                    Console.WriteLine($"Skill: {crewMember.SkillLevel}");
-                    Console.WriteLine($"Percentage cut: {crewMember.PercentageCut}");
+                    if (MaxCut - crewMember.PercentageCut >= 0)
+                    {
+                        Console.WriteLine($"Crewmember Index: {rolodex.IndexOf(crewMember)}");
+                        Console.WriteLine($"Name: {crewMember.Name}");
+                        Console.WriteLine($"Title: {crewMember.Title}");
+                        Console.WriteLine($"Skill: {crewMember.SkillLevel}");
+                        Console.WriteLine($"Percentage cut: {crewMember.PercentageCut}\n");
+                    }
                 }
             }
         }
