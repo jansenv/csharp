@@ -51,7 +51,8 @@ namespace bankHeist2
             {
                 Name = "Garrett Freshwater",
                 Title = "Muscle",
-                SkillLevel = 65
+                SkillLevel = 65,
+                PercentageCut = 4
             };
 
             //Add robbers to the rolodex
@@ -118,65 +119,78 @@ namespace bankHeist2
 
                     rolodex.Add(lockSpecialist);
                 }
+            }
 
-                Random random = new Random();
-                Bank TestBank = new Bank();
-                Random randy = new Random();
-                var AlarmScore = randy.Next(0, 101);
-                var VaultScore = randy.Next(0, 101);
-                var SecurityGuardScore = randy.Next(0, 101);
-                var CashOnHand = randy.Next(50000, 1000001);
+            Random random = new Random();
+            Bank TestBank = new Bank();
+            Random randy = new Random();
+            var AlarmScore = randy.Next(0, 101);
+            var VaultScore = randy.Next(0, 101);
+            var SecurityGuardScore = randy.Next(0, 101);
+            var CashOnHand = randy.Next(50000, 1000001);
 
-                Dictionary<string, int> SecurityScores = new Dictionary<string, int>();
-                SecurityScores.Add("Alarm", AlarmScore);
-                SecurityScores.Add("Vault", VaultScore);
-                SecurityScores.Add("Security Guard", SecurityGuardScore);
-                var OrderedScores = SecurityScores.OrderBy(score => score.Value);
-                var mostSecure = OrderedScores.Last();
-                var leastSecure = OrderedScores.First();
+            Dictionary<string, int> SecurityScores = new Dictionary<string, int>();
+            SecurityScores.Add("Alarm", AlarmScore);
+            SecurityScores.Add("Vault", VaultScore);
+            SecurityScores.Add("Security Guard", SecurityGuardScore);
+            var OrderedScores = SecurityScores.OrderBy(score => score.Value);
+            var mostSecure = OrderedScores.Last();
+            var leastSecure = OrderedScores.First();
 
-                Console.WriteLine("-----------RECON REPORT----------");
+            Console.WriteLine("-----------RECON REPORT----------");
 
-                Console.WriteLine($"Most secure: {mostSecure.Key}");
-                Console.WriteLine($"Least secure: {leastSecure.Key}");
+            Console.WriteLine($"Most secure: {mostSecure.Key}");
+            Console.WriteLine($"Least secure: {leastSecure.Key}");
+
+            foreach (var crewMember in rolodex)
+            {
+                Console.WriteLine($"\nCrewmember Index: {rolodex.IndexOf(crewMember)}");
+                Console.WriteLine($"Name: {crewMember.Name}");
+                Console.WriteLine($"Title: {crewMember.Title}");
+                Console.WriteLine($"Skill: {crewMember.SkillLevel}");
+                Console.WriteLine($"Percentage cut: {crewMember.PercentageCut}");
+            }
+
+            Console.WriteLine("-------------------------");
+
+            List<IRobber> crew = new List<IRobber>();
+
+            while (true)
+            {
+                Console.WriteLine("\nEnter the index # of the crew member you want");
+                string selectedCrewMember = Console.ReadLine();
+                if (selectedCrewMember == "")
+                {
+                    break;
+                }
+                foreach (var crewMember in rolodex)
+                {
+                    if (int.Parse(selectedCrewMember) == rolodex.IndexOf(crewMember))
+                    {
+                        crew.Add(crewMember);
+                        rolodex.Remove(crewMember);
+                        break;
+                    }
+                }
+                Console.WriteLine("Your selected crew:\n");
+
+                foreach (var crewMate in crew)
+                {
+                    Console.WriteLine($"Name: {crewMate.Name}");
+                    Console.WriteLine($"Title: {crewMate.Title}");
+                    Console.WriteLine($"Skill: {crewMate.SkillLevel}");
+                    Console.WriteLine($"Percentage cut: {crewMate.PercentageCut}\n");
+                }
+
+                Console.WriteLine("Still available:\n");
 
                 foreach (var crewMember in rolodex)
                 {
-                    Console.WriteLine($"\nCrewmember Index: {rolodex.IndexOf(crewMember)}");
+                    Console.WriteLine($"Crewmember Index: {rolodex.IndexOf(crewMember)}");
                     Console.WriteLine($"Name: {crewMember.Name}");
                     Console.WriteLine($"Title: {crewMember.Title}");
                     Console.WriteLine($"Skill: {crewMember.SkillLevel}");
                     Console.WriteLine($"Percentage cut: {crewMember.PercentageCut}");
-                }
-
-                Console.WriteLine("-------------------------");
-
-                List<IRobber> crew = new List<IRobber>();
-
-                while (true)
-                {
-                    Console.WriteLine("Enter the index # of the crew member you want");
-                    string selectedCrewMember = Console.ReadLine();
-                    if (selectedCrewMember == "")
-                    {
-                        break;
-                    }
-                    foreach (var crewMember in rolodex)
-                    {
-                        if (int.Parse(selectedCrewMember) == rolodex.IndexOf(crewMember))
-                        {
-                            crew.Add(crewMember);
-                        }
-                    }
-                    Console.WriteLine("Your selected crew:\n");
-                    foreach (var crewMate in crew)
-                    {
-                        Console.WriteLine($"Crewmember Index: {rolodex.IndexOf(crewMate)}");
-                        Console.WriteLine($"Name: {crewMate.Name}");
-                        Console.WriteLine($"Title: {crewMate.Title}");
-                        Console.WriteLine($"Skill: {crewMate.SkillLevel}");
-                        Console.WriteLine($"Percentage cut: {crewMate.PercentageCut}\n");
-                    }
                 }
             }
         }
