@@ -73,9 +73,21 @@ namespace GenericsConsole
             if (userInput == "1")
             {
                 // print all the movies
-                foreach (var movie in allMovies)
+                // foreach (var movie in allMovies)
+                // {
+                //     Console.WriteLine($"{movie.Title} -- {movie.Genre}");
+                // }
+
+                var dvdPager = new Pager<DVD>()
                 {
-                    Console.WriteLine($"{movie.Title} -- {movie.Genre}");
+                    ItemsPerPage = 3,
+                    PageNumber = 0,
+                    AllItems = allMovies
+                };
+
+                foreach (var DVD in dvdPager.GetPage())
+                {
+                    Console.WriteLine($"{DVD.Title} -- {DVD.Genre}");
                 }
             }
             else if (userInput == "2")

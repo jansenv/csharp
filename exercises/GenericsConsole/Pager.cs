@@ -15,5 +15,17 @@ namespace GenericsConsole
             .Take(ItemsPerPage)
             .ToList();
         }
+
+        public List<Taco> GetNextPage()
+        {
+            PageNumber++;
+            return GetPage();
+        }
+
+        public List<Taco> GetPreviousPage()
+        {
+            PageNumber--;
+            return GetPage();
+        }
     }
 }

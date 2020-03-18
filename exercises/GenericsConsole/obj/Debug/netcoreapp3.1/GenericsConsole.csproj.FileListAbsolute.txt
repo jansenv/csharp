@@ -9,3 +9,5 @@ C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.
 C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.AssemblyInfo.cs
 C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.dll
 C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.pdb
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.csproj.CoreCompileInputs.cache
+C:\Users\janse\workspace\csharp\exercises\GenericsConsole\obj\Debug\netcoreapp3.1\GenericsConsole.genruntimeconfig.cache
